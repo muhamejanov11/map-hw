@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+</head>
+<body>
+  <div id="counter">0</div>
+  <button id="increaseBtn">+</button>
+  <button id="decreaseBtn">-</button>
+
+  <script>
+    // Получаем ссылку на элементы DOM
+    const counterElement = document.getElementById('counter');
+    const increaseBtn = document.getElementById('increaseBtn');
+    const decreaseBtn = document.getElementById('decreaseBtn');
+
+    let count = 0; // Инициализируем начальное значение счетчика
+
+    // Функция для обновления текста в счетчике
+    function updateCounter() {
+      counterElement.textContent = count;
+    }
+
+    // Обработчик события для кнопки увеличения
+    increaseBtn.addEventListener('click', function() {
+      count++; // Увеличиваем значение счетчика на 1
+      updateCounter(); // Обновляем отображение счетчика
+    });
+
+    // Обработчик события для кнопки уменьшения
+    decreaseBtn.addEventListener('click', function() {
+      count--; // Уменьшаем значение счетчика на 1
+      updateCounter(); // Обновляем отображение счетчика
+    });
+  </script>
+</body>
+</html>
